@@ -1,0 +1,18 @@
+body,html{
+    font-family: "Roboto", Arial, sans-serif;
+}
+body { background-color:#f7f7f7;}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 640px;
+    margin: 150px auto;
+    padding: 20px 0 80px 0;
+     font-size: 14px;
+}
+.container H2{
+    font-size: 28px;
+    line-height: 60px;
+}

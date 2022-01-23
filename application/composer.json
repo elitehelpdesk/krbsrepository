@@ -1,0 +1,6 @@
+{
+  "require": {
+    "smalot/pdfparser": "*",
+    "erc/pdfmerger": "^0.0.1"
+  }
+}

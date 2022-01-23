@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Slides, A Slideshow Plugin for jQuery</title>
+<link rel="stylesheet" href="css/global.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="js/slides.min.jquery.js"></script>
+<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				play: 8000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(current){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationStart on slide: ', current);
+					};
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationComplete on slide: ', current);
+					};
+				},
+				slidesLoaded: function() {
+					$('.caption').animate({
+						bottom:0
+					},200);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+<div id="container">
+
+  <div id="slides">
+    <div class="slides_container">
+	 <div class="slide">
+	  <a href="" title="" ><img src="../../img/news_images/welcome.jpg" width="570" height="270" alt="Slide 1"></a>
+      </div>
+      <div class="slide">
+	  <a href="" title="" ><img src="../../img/news_images/Capt_ilem.jpg" width="570" height="270" alt="Slide 1"></a>
+        <div class="caption" >
+          <p>CAPT. BENJAMIN P. ILEM</p>
+        </div>
+      </div>
+      <div class="slide">
+	  <a href="" title="" ><img src="../../img/news_images/train_elev1.jpg" width="570" height="270" alt="Slide 1"></a>
+        <div class="caption">
+          <p>MARINE ELEVATOR TRAINING</p>
+        </div>
+      </div>
+      <div class="slide">	  
+	  <a href="" title="" ><img src="../../img/news_images/pres1.jpg" width="570" height="270" alt="Slide 1"></a>
+        <div class="caption">
+          <p>A HAPPY NEW YEAR TO ALL!</p>
+        </div>
+      </div>
+      <div class="slide">	  
+	  <a href="" title="" ><img src="../../img/news_images/diamond1.jpg" width="570" height="270" alt="Slide 1"></a>
+        <div class="caption">
+          <p>TTOS - SPECIAL IN THE PROVINCE OF CEBU CITY</p>
+        </div>
+      </div>
+	  <div class="slide">	  
+	  <a href="" title="" ><img src="../../img/news_images/sarabia2.jpg" width="570" height="270" alt="Slide 1"></a>
+        <div class="caption">
+          <p>SPECIAL TTOS SEMINAR, ILOILO CITY</p>
+        </div>
+      </div>
+      <div class="slide">	  
+	  <a href="" title="" ><img src="../../img/news_images/pres2.jpg" width="570" height="270" alt="Slide 1"></a>
+        <div class="caption">
+          <p>TNKC GROUP CELEBRATES 11TH ANNIVERSARY</p>
+        </div>
+      </div>
+	  
+    </div>
+    <a href="#" class="prev"><img src="img/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a> 
+	<a href="#" class="next"><img src="img/arrow-next.png" width="24" height="43" alt="Arrow Next"></a> 
+</div>
+  <img src="img/example-frame.png" width="739" height="341" alt="Example Frame" id="frame"> 
+</div>
+
+
+
+</div>
+</body>
+</html>
